@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Project - About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/logo.svg" type="image/x-icon"/> 
+</head>
+<body>
+    
+</body>
+</html>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="/index.html"><img src="/images/logo.svg" alt="hotel-project-logo" title="hotel-project-logo"></a>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+
+      <section class="about">
+        <h1>About Hotel Project</h1>
+        <article>
+          <img src="/images/hero/hero-about.avif" alt="About us" title="About us">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam ab similique, ipsum voluptatem repudiandae quod molestiae at, quibusdam consectetur recusandae id. Odit architecto deserunt perferendis quam quasi iure voluptatibus nemo?</p>
+          <ul>
+            <li>Extablished: 2020</li>
+            <li>Rooms:120</li>
+            <li>Staff: 50+</li>
+            <li>Awards: Best City Hotel 2023</li>
+          </ul>
+        </article>
+        <aside>
+          <h2>Our Values</h2>
+          <ol>
+            <li>Hospitality</li>
+            <li>Integrity</li>
+            <li>Innovation</li>
+            <li>Sustainability</li>
+          </ol>
+        </aside>
+      </section>
+      
+    </main>
+    <footer>
+      <p>&copy; 2025 Hotel Projekt. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navList = document.querySelector(".nav-list");
+
+        menuToggle.addEventListener("click", function () {
+          navList.classList.toggle("active");
+          const isExpanded = navList.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !event.target.closest(".nav-list") &&
+            !event.target.closest(".menu-toggle") &&
+            navList.classList.contains("active")
+          ) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && navList.classList.contains("active")) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
+  </body>
+  
+</html>

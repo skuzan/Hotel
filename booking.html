@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Project - Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/logo.svg" type="image/x-icon"/> 
+</head>
+<body>
+    
+</body>
+</html>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="/index.html"><img src="/images/logo.svg" alt="hotel-project-logo" title="hotel-project-logo"></a>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+
+      <section class="booking">
+        <h1>Book Your Stay</h1>
+        <form action="">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name">
+        </div> 
+        <div class="form-row">
+          <label for="surname">Surname</label>
+          <input type="text" id="surname">
+        </div> 
+        <div class="form-row">
+          <label for="email">E-mail</label>
+          <input type="email" id="email">
+        </div> 
+        <div class="form-row">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone">
+        </div> 
+        <div class="form-row">
+          <label for="check-in">Check in Date</label>
+          <input type="date" id="check-in">
+        </div> 
+        <div class="form-row">
+          <label for="check-out">Check out Date</label>
+          <input type="date" id="check-out">
+        </div> 
+        <div class="form-row">
+          <label for="adults">Adults</label>
+          <input type="number" id="adults" min="1" value="1">
+        </div> 
+        <div class="form-row">
+          <label for="children">Children</label>
+          <input type="number" id="children" min="0" value="0">
+        </div> 
+        <div class="form-row">
+          <label for="name">Room Type</label>
+          <select name="room-type" id="room-type">
+            <option value="single">Deluxe</option>
+            <option value="double">Family</option>
+            <option value="suite">Executive</option>
+            <option value="suite">Standart</option>
+            <option value="suite">Superrior</option>
+
+          </select>
+        </div> 
+        <div class="form-row">
+          <label for="notes">Notes</label>
+          <textarea name="notes" id="notes" rows="4"></textarea>
+        </div> 
+        <input type="checkbox" name="terms" id="terms">
+        <label for="terms">I agree to the terms and conditions.</label>
+
+        <button type="submit">Book Now</button>
+        </form>
+      </section>
+      
+    </main>
+    <footer>
+      <p>&copy; 2025 Hotel Projekt. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navList = document.querySelector(".nav-list");
+
+        menuToggle.addEventListener("click", function () {
+          navList.classList.toggle("active");
+          const isExpanded = navList.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !event.target.closest(".nav-list") &&
+            !event.target.closest(".menu-toggle") &&
+            navList.classList.contains("active")
+          ) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && navList.classList.contains("active")) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
+  </body>
+  
+</html>

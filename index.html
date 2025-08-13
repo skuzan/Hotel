@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/logo.svg" type="image/x-icon"/> 
+</head>
+<body>
+    
+</body>
+</html>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="/index.html"><img src="/images/logo.svg" alt="hotel-project-logo" title="hotel-project-logo"></a>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <img src="images/hero/hero-home.avif" alt="hotel hero" title="Hotel Hero">
+        <article>
+         <h1>Welcome to Seven Hotel</h1>
+         <p>Your comfort, our priority. Experince luxury and relaxation in the heart of the city.</p> 
+         <a href="/booking.html">Book Now</a>
+        </article>
+      </section>
+
+      <section class="features">
+        <h2>Why Choose Us?</h2>
+        <ul class="amenities-extra">
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#0ea5e9"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12a9 9 0 0 1 14 0" />
+              <path d="M8.5 15.5a5 5 0 0 1 7 0" />
+              <path d="M12 20h.01" />
+            </svg>
+            Free Wi-Fi
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#f59e0b"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 21s8-5.5 8-11A8 8 0 0 0 4 10c0 5.5 8 11 8 11z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Parking
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#a78bfa"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 7h18" />
+              <path d="M6 10h12v8H6z" />
+              <path d="M9 6V4h6v2" />
+            </svg>
+            Room Service
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#22c55e"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M2 18c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2 2-2 4-2" />
+              <path d="M6 6v8" />
+              <path d="M10 6v8" />
+            </svg>
+            Laundry
+          </li>
+          <li>
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="#ef4444"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="8" cy="7" r="3" />
+              <circle cx="16" cy="7" r="3" />
+              <path d="M2 21v-2a4 4 0 0 1 4-4h4" />
+              <path d="M22 21v-2a4 4 0 0 0-4-4h-4" />
+            </svg>
+            Pet Friendly
+          </li>
+        </ul>
+
+      </section>
+
+    </main>
+    <footer>
+      <p>&copy; 2025 Hotel Projekt. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navList = document.querySelector(".nav-list");
+
+        menuToggle.addEventListener("click", function () {
+          navList.classList.toggle("active");
+          const isExpanded = navList.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !event.target.closest(".nav-list") &&
+            !event.target.closest(".menu-toggle") &&
+            navList.classList.contains("active")
+          ) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && navList.classList.contains("active")) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
+  </body>
+  
+</html>

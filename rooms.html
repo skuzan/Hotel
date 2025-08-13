@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Project - Rooms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/logo.svg" type="image/x-icon"/> 
+</head>
+<body>
+    
+</body>
+</html>
+  <body>
+    <header>
+      <nav>
+        <div>
+          <a href="/index.html"><img src="/images/logo.svg" alt="hotel-project-logo" title="hotel-project-logo"></a>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="rooms">
+        <h1>Our Rooms</h1>
+        <div class="rooms-cards">
+          <article class="room-card">
+            <img src="/images/rooms/deluxe.avif" alt="Deluxe Room" title="Deluxe Room">
+            <h2>Deluxe Room</h2>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </article>
+          <article class="room-card">
+            <img src="/images/rooms/family.avif" alt="Family Room" title="Family Room">
+            <h2>Deluxe Room</h2>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </article>
+          <article class="room-card">
+            <img src="/images/rooms/standart.avif" alt="Standart Room" title="Standart Room">
+            <h2>Deluxe Room</h2>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </article>
+          <article class="room-card">
+            <img src="/images/rooms/suite.avif" alt="Suite Room" title="Suite Room">
+            <h2>Deluxe Room</h2>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </article>
+          <article class="room-card">
+            <img src="/images/rooms/superior.avif" alt="Superior Room" title="Superior Room">
+            <h2>Deluxe Room</h2>
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </article>
+
+        </div>
+        <table class="rooms-table">
+        <caption>Room Comparison</caption>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Capacity</th>
+            <th>Price/Night</th>
+          </tr>
+        </thead> 
+        <tbody>
+        <tr>
+          <td>Family Rooms</td>
+          <td>4</td>
+          <td>$150</td>
+        </tr>
+        <tr>
+          <td>Standart Rooms</td>
+          <td>2</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>Suite Rooms</td>
+          <td>3</td>
+          <td>$200</td>
+        </tr>
+        <tr>
+          <td>Superior Rooms</td>
+          <td>2</td>
+          <td>$120</td>
+        </tr>
+        <tr>
+          <td>Deluxe Rooms</td>
+          <td>2</td>
+          <td>$180</td>
+        </tr>
+        </tbody> 
+
+        </table>
+      </section>
+      
+    </main>
+    <footer>
+      <p>&copy; 2025 Hotel Projekt. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navList = document.querySelector(".nav-list");
+
+        menuToggle.addEventListener("click", function () {
+          navList.classList.toggle("active");
+          const isExpanded = navList.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !event.target.closest(".nav-list") &&
+            !event.target.closest(".menu-toggle") &&
+            navList.classList.contains("active")
+          ) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && navList.classList.contains("active")) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
+  </body>
+  
+</html>
