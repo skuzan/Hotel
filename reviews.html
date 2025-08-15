@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Project - Guest Reviews</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/icon.png" type="image/x-icon"/> 
+</head>
+<body>
+    
+</body>
+</html>
+  <body>
+    <header>
+      <nav class="header-nav">
+        <div class="logo">
+          <a href="/index.html"><img src="/images/logo2.png" alt="hotel-project-logo" title="hotel-project-logo"></a>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-label="Toggle navigation menu">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+       <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="rooms.html">Rooms</a></li>
+          <li><a href="amenities.html">Amenities</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a aria-current="page" href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+
+      <section class="reviews">
+        <h1>Guest Reviews</h1>
+
+        <div class="reviews-card">
+          <img src="/images/revievs/1.png" alt="Reviews" title="Reviews" class="profil-image">
+          <article class="reviews-content">
+            <h2>Elif Yılmaz</h2>
+            <p>August 10, 2025</p>
+            <img src="/images/revievs/comment.png" alt="Comment" title="Comment" class="comment-star">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro obcaecati natus aut expedita dolorum dignissimos neque magni, delectus officia sapiente ullam animi placeat eum veniam voluptates temporibus eius! Ab quae quidem numquam explicabo, fugit facilis repudiandae quibusdam temporibus, odio, blanditiis maiores. At sapiente aperiam dicta possimus dolore fugiat tempora sint!.</p>
+          </article>
+        </div>
+
+        <div class="reviews-card">
+          <img src="/images/revievs/2.png" alt="Reviews" title="Reviews" class="profil-image">
+          <article class="reviews-content">
+            <h2>Murat Tekin</h2>
+            <p>August 10, 2025</p>
+            <img src="/images/revievs/comment.png" alt="Comment" title="Comment" class="comment-star">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro obcaecati natus aut expedita dolorum dignissimos neque magni, delectus officia sapiente ullam animi placeat eum veniam voluptates temporibus eius! Ab quae quidem numquam explicabo, fugit facilis repudiandae quibusdam temporibus, odio, blanditiis maiores. At sapiente aperiam dicta possimus dolore fugiat tempora sint!.</p>
+          </article>
+        </div>
+        <div class="reviews-card">
+          <img src="/images/revievs/1.png" alt="Reviews" title="Reviews" class="profil-image">
+          <article class="reviews-content">
+            <h2>Elif Yılmaz</h2>
+            <p>August 10, 2025</p>
+            <img src="/images/revievs/comment.png" alt="Comment" title="Comment" class="comment-star">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro obcaecati natus aut expedita dolorum dignissimos neque magni, delectus officia sapiente ullam animi placeat eum veniam voluptates temporibus eius! Ab quae quidem numquam explicabo, fugit facilis repudiandae quibusdam temporibus, odio, blanditiis maiores. At sapiente aperiam dicta possimus dolore fugiat tempora sint!.</p>
+          </article>
+        </div>
+        <div class="reviews-card">
+          <img src="/images/revievs/2.png" alt="Reviews" title="Reviews" class="profil-image">
+          <article class="reviews-content">
+            <h2>Murat Tekin</h2>
+            <p>August 10, 2025</p>
+            <img src="/images/revievs/comment.png" alt="Comment" title="Comment" class="comment-star">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro obcaecati natus aut expedita dolorum dignissimos neque magni, delectus officia sapiente ullam animi placeat eum veniam voluptates temporibus eius! Ab quae quidem numquam explicabo, fugit facilis repudiandae quibusdam temporibus, odio, blanditiis maiores. At sapiente aperiam dicta possimus dolore fugiat tempora sint!.</p>
+          </article>
+        </div>
+        <div class="reviews-card">
+          <img src="/images/revievs/1.png" alt="Reviews" title="Reviews" class="profil-image">
+          <article class="reviews-content">
+            <h2>Elif Yılmaz</h2>
+            <p>August 10, 2025</p>
+            <img src="/images/revievs/comment.png" alt="Comment" title="Comment" class="comment-star">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro obcaecati natus aut expedita dolorum dignissimos neque magni, delectus officia sapiente ullam animi placeat eum veniam voluptates temporibus eius! Ab quae quidem numquam explicabo, fugit facilis repudiandae quibusdam temporibus, odio, blanditiis maiores. At sapiente aperiam dicta possimus dolore fugiat tempora sint!.</p>
+          </article>
+        </div>
+      </section>
+      
+    </main>
+    <footer>
+      <p>&copy; 2025 Hotel Projekt. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navList = document.querySelector(".nav-list");
+
+        menuToggle.addEventListener("click", function () {
+          navList.classList.toggle("active");
+          const isExpanded = navList.classList.contains("active");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+        });
+
+        document.addEventListener("click", function (event) {
+          if (
+            !event.target.closest(".nav-list") &&
+            !event.target.closest(".menu-toggle") &&
+            navList.classList.contains("active")
+          ) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape" && navList.classList.contains("active")) {
+            navList.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    </script>
+  </body>
+  
+</html>
