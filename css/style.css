@@ -1,7 +1,8 @@
 :root{
 
-    --primary-color: #2a3d66;
-    --accent-color: #e9b44c;
+    --primary-color: #00747C;
+    --accent-color: #00BBC9;
+    --button-color: #202022;
     --bg-color: #f6f7fb;
     --text-color: #222222;
     --shadow: 0 5px 15px rgba(0, 0, 0, 0,12);
@@ -149,8 +150,8 @@ main{
 
 .btn{
     display: inline-block;
-    background: var(--accent-color);
-    color: var(--primary-color);
+    background: var(--button-color);
+    color: #CACACA;
     padding: 0.75rem 2rem;
     border-radius: 2rem;
     font-size: 1.1rem;
@@ -306,12 +307,12 @@ main{
 }
 
 .rooms-table th{
-    background: var(--accent-color);
-    color: var(--primary-color);
+    background: #00747C;
+    color: white;
 }
 
 .rooms-table tr:hover{
-    background: var(--bg-color);
+    background: #CACACA;
 }
 
 .rooms-table tr:last-child td{
@@ -319,7 +320,7 @@ main{
 }
 
 .rooms-table tr:nth-child(even){
-    background: #ffe9bc;
+    background: #00BBC9;
 }
 
 /* AMENITIES*/
