@@ -12,6 +12,9 @@
     --font-size-l:1.5rem;
     --font-size-m:1rem;
     --font-size-s:0.75rem;
+    --shadow2: 20px 20px 60px #bebebe,
+               -20px -20px 60px #ffffff;
+    --shadow3: 0 10px 30px rgba(0, 0, 0, 0.2);
 
 
 
@@ -254,6 +257,7 @@ main{
 
 .room-card:hover{
     transform: scale(1.03);
+    box-shadow: var(--shadow2);
 }
 
 .room-card img{
